@@ -96,7 +96,7 @@ function Data() {
             <h5>*All prices are in Rupees</h5>
             <h5>*Based on 10,000 ppm of Azadirachtin</h5>
             <h5>*Reload page to display original data </h5>
-            <h1 id = 'title'>Nivar Data</h1>
+            <h1 id = 'title'>Nivaar Data</h1>
             <input
                 type="text"
                 placeholder="Search by ID"
@@ -105,7 +105,7 @@ function Data() {
                 className="search-input"
             />
             <AddForm onAdd={handleAddData} />
-            <MultiplyButton onMultiply={handleMultiply} /> {/* Use the updated MultiplyButton component */}
+            <MultiplyButton onMultiply={handleMultiply} /> 
             <table className="table">
                 <thead className="head">
                     <tr>
@@ -142,7 +142,7 @@ function Data() {
                                 <td>{d.gst_tax}</td>
                                 <td>{d.description}</td>
                                 <td>
-                                    <button onClick={() => handleDelete(d.ID)}>Delete</button>
+                                    <button onClick={() => handleDelete(d.ID)} id = "delete">Delete</button>
                                 </td>
                             </tr>
                         ))

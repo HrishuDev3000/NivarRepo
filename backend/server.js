@@ -3,6 +3,9 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+const users = [];
+
+
 dotenv.config();
 
 const app = express();

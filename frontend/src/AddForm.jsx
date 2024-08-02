@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./AddForm.css";
 
 function AddForm({ onAdd }) {
     const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ function AddForm({ onAdd }) {
             <input type="number" name="ppm" placeholder="PPM" value={formData.ppm} onChange={handleChange} required />
             <input type="number" name="gst_tax" placeholder="GST Tax" value={formData.gst_tax} onChange={handleChange} required />
             <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange} required />
-            <button type="submit">Add Data</button>
+            <button type="submit" id = "addButton">Add Data</button>
         </form>
     );
 }

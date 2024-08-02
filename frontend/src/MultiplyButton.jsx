@@ -1,4 +1,5 @@
 import React from 'react';
+import "./MultiplyButton.css";
 
 function MultiplyButton({ onMultiply }) {
     return (

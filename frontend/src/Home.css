@@ -1,19 +1,53 @@
-/* Home.css */
-
-#root{
-    width: 100%;
+#root {
+  width: 100%;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the overlay is above other content */
+}
+
+#password {
+  width: auto; 
+  height: auto; 
+  padding: 1rem 2rem; 
+  font-size: 1.5rem; 
+  cursor: pointer;
+  border: none;
+  color: darkviolet; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  position: relative; 
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh; /* Full viewport height */
-    width: 100%;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* Full viewport height */
+  width: 100%;
+  margin: 0;
+  transition: opacity 0.3s ease, pointer-events 0.3s ease;
+}
+
+.container.frozen {
+  pointer-events: none; 
+  opacity: 0.5; 
 }
 
 img {
-    max-width: 100%; 
-    height: auto;    
+  max-width: 100%; 
+  height: auto;    
 }
